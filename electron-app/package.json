@@ -1,5 +1,5 @@
 {
-  "name": "electron-app",
+  "name": "audio-caption-assistant",
   "version": "1.0.0",
   "description": "System Audio Capturer",
   "main": "main.js",
@@ -13,6 +13,7 @@
   "type": "commonjs",
   "build": {
     "appId": "com.example.caption",
+    "productName": "audio-caption-assistant",
     "win": {
       "target": "portable"
     },
