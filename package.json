@@ -1,0 +1,18 @@
+{
+  "name": "caption-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "build": "esbuild mic_source.js --bundle --outfile=mic.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@deepgram/sdk": "^3.9.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2"
+  }
+}

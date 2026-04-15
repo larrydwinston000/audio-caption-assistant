@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Live Caption Inputter",
+  "version": "1.0",
+  "description": "Automatically inputs dictated live captions text into a specified input field. Press Ctrl+K to start, Ctrl+L to stop.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabCapture"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Setup Microphone"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "mic.html",
+        "mic.js",
+        "audio-processor.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
